@@ -1,0 +1,36 @@
+- Standardaize Node model so it doesnt only work for Trees
+
+- Refactor Blackboard to be more then just a hashmap. Will make later changes easier
+	✓ Move to own struct
+	- Path based black board (global and personal namespace)
+		- /world/time			#The current time of the world
+		- ~/counter 			#Some personal counter
+		- /entities/some_name	#An other entities personal namespace
+
+- Tree
+	- State based chooser (Selects one of its child nodes based on which state the owner is in)
+
+- State Machine
+	- Change state based on received signals
+	- How often can state change in a single tick?
+		- Buffer state changes or apply them in real time (or both)
+	- State should be available in blackboard but prob not be managed there (special name space for states?)
+	- Allow Nested State Machines
+
+- Subsumption Architecture
+
+- Was auch immer Left4Dead für dialog da gemacht hat
+
+- Utility Maximizer
+
+- Utility functions
+	- A* and NavMesh (somehow acces built in Godot Versions)
+	- Utility Point cloud 
+		- calc_pointcloud(function, center, range) -> Pointcloud #Return a pointcloud that can bes processed further
+		- find_best(function, center, range, n) -> Vec(Position) #Return a Vec with the n highest utility points in the cloud
+
+
+
+######## Far off land of wishes and dreams #########
+
+- Language Processing

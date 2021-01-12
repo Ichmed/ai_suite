@@ -1,0 +1,11 @@
+[gd_resource type="GDNativeLibrary" format=2]
+
+[resource]
+entry/UWP.32 = "res://addons/ai_suite/target/release/behaviour_tree_lib.dll"
+entry/UWP.64 = "res://addons/ai_suite/target/release/behaviour_tree_lib.dll"
+entry/Windows.64 = "res://addons/ai_suite/target/release/behaviour_tree_lib.dll"
+entry/Windows.32 = "res://addons/ai_suite/target/release/behaviour_tree_lib.dll"
+dependency/UWP.32 = [  ]
+dependency/UWP.64 = [  ]
+dependency/Windows.64 = [  ]
+dependency/Windows.32 = [  ]

@@ -1,0 +1,9 @@
+tool
+extends EditorPlugin
+
+func _enter_tree():
+	%REGISTER%
+
+
+func _exit_tree():
+	%REMOVE%

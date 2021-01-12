@@ -1,0 +1,22 @@
+[package]
+name = "behaviour_tree"
+version = "0.1.0"
+authors = ["Ichmed <mijomeyer@t-online.de>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde_json = "1.0"
+serde = "1.0"
+gdnative = "0.9.1"
+euclid = "0.22.1"
+
+[lib]
+crate-type = ["cdylib"]
+name = "behaviour_tree_lib"
+path = "src/lib.rs"
+
+[[bin]]
+name = "behaviour_tree_bin"
+path = "src/main.rs"
