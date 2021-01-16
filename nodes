@@ -17,9 +17,13 @@ Setter
 # Overrider
 Caller
 
+TargetClosest
+
 UtilityMaximizer
 UtilityFunction
 
 UtilityAdder
 UtilityMultiplier
 UtilityMask
+
+Boid

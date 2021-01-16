@@ -12,12 +12,17 @@ func _enter_tree():
 	add_custom_type("Sequence", "Node", preload("res://addons/ai_suite/scripts/Sequence.gdns"), preload("res://addons/ai_suite/icons/Sequence.png"))
 	add_custom_type("Setter", "Node", preload("res://addons/ai_suite/scripts/Setter.gdns"), preload("res://addons/ai_suite/icons/Setter.png"))
 	add_custom_type("Caller", "Node", preload("res://addons/ai_suite/scripts/Caller.gdns"), preload("res://addons/ai_suite/icons/Caller.png"))
+	add_custom_type("TargetClosest", "Node", preload("res://addons/ai_suite/scripts/TargetClosest.gdns"), preload("res://addons/ai_suite/icons/TargetClosest.png"))
 	add_custom_type("UtilityMaximizer", "Node", preload("res://addons/ai_suite/scripts/UtilityMaximizer.gdns"), preload("res://addons/ai_suite/icons/UtilityMaximizer.png"))
 	add_custom_type("UtilityFunction", "Node", preload("res://addons/ai_suite/scripts/UtilityFunction.gdns"), preload("res://addons/ai_suite/icons/UtilityFunction.png"))
 	add_custom_type("UtilityAdder", "Node", preload("res://addons/ai_suite/scripts/UtilityAdder.gdns"), preload("res://addons/ai_suite/icons/UtilityAdder.png"))
 	add_custom_type("UtilityMultiplier", "Node", preload("res://addons/ai_suite/scripts/UtilityMultiplier.gdns"), preload("res://addons/ai_suite/icons/UtilityMultiplier.png"))
 	add_custom_type("UtilityMask", "Node", preload("res://addons/ai_suite/scripts/UtilityMask.gdns"), preload("res://addons/ai_suite/icons/UtilityMask.png"))
+	add_custom_type("Boid", "Node", preload("res://addons/ai_suite/scripts/Boid.gdns"), preload("res://addons/ai_suite/icons/Boid.png"))
 	
+	
+	add_custom_type("SimpleBoid", "KinematicBody", preload("res://addons/ai_suite/scripts/SimpleBoid.gdns"), preload("res://addons/ai_suite/icons/SimpleBoid.png"))
+	add_custom_type("SimpleBoid2D", "KinematicBody2D", preload("res://addons/ai_suite/scripts/SimpleBoid2D.gdns"), preload("res://addons/ai_suite/icons/SimpleBoid2D.png"))
 
 
 func _exit_tree():
@@ -31,9 +36,14 @@ func _exit_tree():
 	remove_custom_type("Sequence")
 	remove_custom_type("Setter")
 	remove_custom_type("Caller")
+	remove_custom_type("TargetClosest")
 	remove_custom_type("UtilityMaximizer")
 	remove_custom_type("UtilityFunction")
 	remove_custom_type("UtilityAdder")
 	remove_custom_type("UtilityMultiplier")
 	remove_custom_type("UtilityMask")
+	remove_custom_type("Boid")
 	
+	
+	remove_custom_type("SimpleBoid")
+	remove_custom_type("SimpleBoid2D")

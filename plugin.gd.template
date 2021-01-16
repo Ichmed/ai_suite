@@ -3,7 +3,13 @@ extends EditorPlugin
 
 func _enter_tree():
 	%REGISTER%
+	
+	add_custom_type("SimpleBoid", "KinematicBody", preload("res://addons/ai_suite/scripts/SimpleBoid.gdns"), preload("res://addons/ai_suite/icons/SimpleBoid.png"))
+	add_custom_type("SimpleBoid2D", "KinematicBody2D", preload("res://addons/ai_suite/scripts/SimpleBoid2D.gdns"), preload("res://addons/ai_suite/icons/SimpleBoid2D.png"))
 
 
 func _exit_tree():
 	%REMOVE%
+	
+	remove_custom_type("SimpleBoid")
+	remove_custom_type("SimpleBoid2D")

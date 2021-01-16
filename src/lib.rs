@@ -16,4 +16,8 @@ pub mod tree {
 
 	pub mod target;
 }
-pub mod utility;
+pub mod utility_map;
+
+pub mod boid;
+
+mod utility;

@@ -262,12 +262,17 @@ fn init(handle: InitHandle) {
 	handle.add_class::<crate::tree::setter::Setter>();
 	handle.add_class::<crate::tree::caller::Caller>();
 	handle.add_class::<crate::tree::emitter::Emitter>();
+	handle.add_class::<crate::tree::target::TargetClosest>();
 	
-	handle.add_class::<crate::utility::UtilityFunction>();
-	handle.add_class::<crate::utility::UtilityMaximizer>();
-	handle.add_class::<crate::utility::UtilityAdder>();
-	handle.add_class::<crate::utility::UtilityMultiplier>();
-	handle.add_class::<crate::utility::UtilityMask>();
+	handle.add_class::<crate::utility_map::UtilityFunction>();
+	handle.add_class::<crate::utility_map::UtilityMaximizer>();
+	handle.add_class::<crate::utility_map::UtilityAdder>();
+	handle.add_class::<crate::utility_map::UtilityMultiplier>();
+	handle.add_class::<crate::utility_map::UtilityMask>();
+
+	handle.add_class::<crate::boid::Boid>();
+	handle.add_class::<crate::boid::SimpleBoid>();
+	handle.add_class::<crate::boid::SimpleBoid2D>();
 }
 
 godot_init!(init);
