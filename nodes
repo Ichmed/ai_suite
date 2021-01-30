@@ -17,7 +17,15 @@ Setter
 # Overrider
 Caller
 
-TargetClosest
+Has
+IsTrue
+CompareInt
+CompareFloat
+CompareString
+CompareDistance
+
+TargetClosestPosition
+TargetClosestNode
 
 UtilityMaximizer
 UtilityFunction

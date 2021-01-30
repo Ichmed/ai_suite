@@ -87,8 +87,8 @@ impl ToTreeNodeState for Variant {
 			VariantType::Nil => TreeNodeState::FAILURE,
 			VariantType::I64 => TreeNodeState::from_i64(self.to_i64()),
 			VariantType::Bool => TreeNodeState::from_bool(self.to_bool()),
+			VariantType::GodotString => TreeNodeState::from_string(self.to_string()),
 			_ => TreeNodeState::SUCCESS
-			
 		}
 	}
 
@@ -262,7 +262,15 @@ fn init(handle: InitHandle) {
 	handle.add_class::<crate::tree::setter::Setter>();
 	handle.add_class::<crate::tree::caller::Caller>();
 	handle.add_class::<crate::tree::emitter::Emitter>();
-	handle.add_class::<crate::tree::target::TargetClosest>();
+	handle.add_class::<crate::tree::target::TargetClosestPosition>();
+	handle.add_class::<crate::tree::target::TargetClosestNode>();
+
+	handle.add_class::<crate::tree::check::Has>();
+	handle.add_class::<crate::tree::check::IsTrue>();
+	handle.add_class::<crate::tree::check::CompareInt>();
+	handle.add_class::<crate::tree::check::CompareFloat>();
+	handle.add_class::<crate::tree::check::CompareString>();
+	handle.add_class::<crate::tree::check::CompareDistance>();
 	
 	handle.add_class::<crate::utility_map::UtilityFunction>();
 	handle.add_class::<crate::utility_map::UtilityMaximizer>();

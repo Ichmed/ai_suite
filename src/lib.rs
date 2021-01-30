@@ -15,6 +15,7 @@ pub mod tree {
 	pub mod emitter;
 
 	pub mod target;
+	pub mod check;
 }
 pub mod utility_map;
 

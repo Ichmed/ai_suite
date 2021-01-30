@@ -2,6 +2,8 @@ use gdnative::prelude::*;
 use crate::base::*;
 use crate::tree::base::*;
 
+use crate::blackboard;
+
 #[derive(NativeClass)]
 #[inherit(Node)]
 pub struct Caller {
@@ -54,13 +56,7 @@ impl Tick for Caller {
 			return TreeNodeState::FAILURE;
 		}
 
-		let r = node.call(self.method_name.clone(), self.values.iter().map(|x| match x.try_to_string() {
-			Some(s) => match s.strip_prefix("#") {
-				Some(np) => manager.call("get", &[np.to_string().to_variant()]),
-				None => x.clone()
-			},
-			None => x.clone(),
-		}).collect::<Vec<Variant>>().as_slice());
+		let r = node.call(self.method_name.clone(), &blackboard!(self.values, manager));
 
 		if self.target != "" {
 			manager.call("insert", &[Variant::from_str(self.target.clone()), r.clone()]);
