@@ -6,8 +6,6 @@ use std::cell::RefCell;
 
 pub trait Tick {
 	unsafe fn tick(&mut self, owner: TRef<Node>, manager: Ref<Node, Shared>) -> TreeNodeState;
-
-	// fn run(&mut self, owner: Option<&Node>);
 }
 
 impl dyn Tick {
